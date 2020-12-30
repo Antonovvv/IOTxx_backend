@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "qww",
+    "password": "zdrfvhujm7415963",
+    "database": "iot",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "qww",
+    "password": "zdrfvhujm7415963",
+    "database": "iot",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "qww",
+    "password": "zdrfvhujm7415963",
+    "database": "iot",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
