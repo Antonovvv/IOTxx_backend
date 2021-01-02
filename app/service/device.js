@@ -22,3 +22,5 @@ class DeviceService extends Service {
     
   }
 }
+
+module.exports = DeviceService;

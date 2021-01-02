@@ -23,7 +23,15 @@ module.exports = appInfo => {
     host: '127.0.0.1',
     port: 3306,
     database: 'iot',
+    username: 'qww',
+    password: 'zdrfvhujm7415963',
   };
+
+  config.security = {
+    csrf: {
+      enable: false,
+    }
+  }
 
   // add your user config here
   const userConfig = {

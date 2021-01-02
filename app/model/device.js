@@ -7,6 +7,8 @@ module.exports = app => {
     device_id: { type: INTEGER, primaryKey: true, autoIncrement: true },
     name: STRING(30),
     owner: STRING(30),
+  }, {
+    timestamps: false,
   });
 
   return Device;
