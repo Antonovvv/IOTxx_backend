@@ -10,6 +10,14 @@ class RecordController extends Controller {
   async create() {
     const { ctx } = this;
     
+    // console.log(ctx.request.body);
+    const res = await ctx.service.record.create(ctx.request.body);
+
+    ctx.status = res.status;
+    ctx.body = {
+      success: res.success,
+      msg: res.msg || res.err,
+    };
   }
 }
 

@@ -1,10 +1,22 @@
 'use strict';
 
 const Controller = require('egg').Controller;
+const { Op } = require('sequelize');
 
 class HomeController extends Controller {
   async index() {
-    this.ctx.body = 'hi'
+    const { ctx } = this;
+
+    const devices = await ctx.model.Device.findAll({
+      where: {
+        name: {
+          [Op.not]: null,
+        },
+      }
+    });
+
+    // console.log(devices);
+    ctx.body = devices;
   }
 
   async create() {

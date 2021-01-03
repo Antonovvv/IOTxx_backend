@@ -12,6 +12,8 @@ module.exports = app => {
       onUpdate: 'cascade',
       onDelete: 'cascade',
     },
+  }, {
+    timestamps: false,
   });
 
   return Record;
