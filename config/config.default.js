@@ -20,11 +20,16 @@ module.exports = appInfo => {
 
   config.sequelize = {
     dialect: 'mysql',
+    dialectOptions: {
+      dateStrings: true,
+      typeCast: true
+    },
     host: '127.0.0.1',
     port: 3306,
     database: 'iot',
     username: 'qww',
     password: 'zdrfvhujm7415963',
+    timezone: '+08:00',
   };
 
   config.security = {

@@ -4,20 +4,23 @@
     "password": "zdrfvhujm7415963",
     "database": "iot",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "timezone": "+08:00"
   },
   "test": {
     "username": "qww",
     "password": "zdrfvhujm7415963",
     "database": "iot",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "timezone": "+08:00"
   },
   "production": {
     "username": "qww",
     "password": "zdrfvhujm7415963",
     "database": "iot",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "timezone": "+08:00"
   }
 }
