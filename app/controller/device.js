@@ -2,6 +2,7 @@
 
 const Controller = require('egg').Controller;
 const { Op } = require('sequelize');
+const device = require('../model/device');
 
 class HomeController extends Controller {
   async index() {
@@ -14,6 +15,18 @@ class HomeController extends Controller {
         },
       }
     });
+    for (let i = 0; i < devices.length; ++i) {
+      let device = devices[i];
+      let records = await ctx.model.Record.findAll({
+        where: {
+          device_id: device.device_id
+        },
+      });
+      devices[i] = {
+        ...device.dataValues,
+        records,
+      };
+    }
 
     // console.log(devices);
     ctx.body = devices;
