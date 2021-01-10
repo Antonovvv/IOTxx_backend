@@ -47,11 +47,12 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.dropTable('devices');
-      await queryInterface.dropTable('records');
       await queryInterface.dropTable('points');
-      await queryInterface.commit();
+      await queryInterface.dropTable('records');
+      await queryInterface.dropTable('devices');
+      await transaction.commit();
     } catch (e) {
+      console.error(e);
       await transaction.rollback();
     }
   },
